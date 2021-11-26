@@ -1,0 +1,44 @@
+
+ul{
+    list-style:none; /* Eliminamos los bullets */
+    margin:0px; /* Quitamos los margenes */
+    padding:0px; /* Quitamos el padding */
+    }
+    li{
+        list-style-type: none;
+        background-color: rgb(165, 165, 165)   ; 
+    }
+    
+    ul li{
+        padding-top:10px;
+    }
+    
+    a{
+        color: rgb(235, 0, 0);
+        text-decoration: none!important;
+        font-size: 20px;
+        
+    }
+    
+    a:hover{
+    background-color: rgb(255, 255, 255) !important;
+    text-decoration: none!important;
+    }
+    
+    ul li {
+        text-align: right !important;
+        padding-left:20px;
+        padding-right:20px;
+        border-right:1px solid #FFFFFF;
+        display: inline;
+        }
+    
+        .Menu {
+            background-color: rgb(165, 165, 165);
+            text-decoration: none!important
+            }
+    
+            A:link {text-decoration: none!important };
+            A:visited {color: black;  font-family: arial; text-decoration: none!important };
+            A:hover { color: black; font-family: arial; text-decoration: none !important};
+    
