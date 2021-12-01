@@ -6,7 +6,7 @@ ul{
     }
     li{
         list-style-type: none;
-        background-color: rgb(165, 165, 165)   ; 
+        background-color: rgb(255, 255, 255)   ; 
     }
     
     ul li{
@@ -14,31 +14,32 @@ ul{
     }
     
     a{
-        color: rgb(235, 0, 0);
+        color: rgb(0, 0, 0);
         text-decoration: none!important;
         font-size: 20px;
         
     }
     
     a:hover{
-    background-color: rgb(255, 255, 255) !important;
+    background-color: rgb(177, 79, 79) !important;
     text-decoration: none!important;
+    border-radius: 10%;
+    font-size: 20px;
     }
     
     ul li {
         text-align: right !important;
         padding-left:20px;
         padding-right:20px;
-        border-right:1px solid #FFFFFF;
+        border-right:1px solid #fffafa;
         display: inline;
         }
     
-        .Menu {
-            background-color: rgb(165, 165, 165);
-            text-decoration: none!important
-            }
+      
     
             A:link {text-decoration: none!important };
             A:visited {color: black;  font-family: arial; text-decoration: none!important };
             A:hover { color: black; font-family: arial; text-decoration: none !important};
-    
+
+            
+       
