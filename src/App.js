@@ -1,7 +1,7 @@
 
 import './App.css';
 import Navbar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import ItemList from './components/ItemList';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h1>ShooStore</h1>
         <Navbar/>
-        <ItemListContainer greetings='Bienvenid@s'/>
+        <ItemList/>
     </div>
   );
 
