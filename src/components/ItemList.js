@@ -2,6 +2,7 @@
 import Item from '../components/Item';
 import React, {useState, useEffect} from 'react';
 
+
 const ItemList=()=>{
   const [products, setProducts] =useState([]);
 
@@ -11,7 +12,7 @@ const ItemList=()=>{
     .then((response) => response.json())
     .then ((respuesta) => setProducts(respuesta))
     },2000);
-}, );
+},);
 
 
 return(
@@ -21,6 +22,11 @@ return(
       return <Item key={product.id} prop={product}/>;
     })}
     
+
+
+    <>
+    
+    </>
   </div>
  
   

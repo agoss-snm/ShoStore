@@ -2,7 +2,7 @@
 import { Button } from 'semantic-ui-react';
 import React, {useState } from "react";
 
-const ItemCount=({stock, initial})=>{
+export const ItemCount=({stock, initial})=>{
     const [counter, setCounter]= React.useState(initial);
     
     function handleIncrement() {
@@ -39,4 +39,3 @@ const ItemCount=({stock, initial})=>{
     };
 
     export default ItemCount; 
-	

@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+
+.appFondo{
+  background-color: rgb(213, 255, 145);
+}
