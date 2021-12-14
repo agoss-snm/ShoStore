@@ -11,12 +11,14 @@ export const ItemDetail =({item})=>{
   return <div className='DetailC'>
   <Grid>
   <Grid.Column width={4}>
-      <Image src= {item.img} />
+      <Image src= {item.image} />
     </Grid.Column>
     <Grid.Column width={9}>
-    <h4>{item.description}</h4>
-    <>{item.price}</>
+    <h2>{item.description}</h2>
+    <br></br> <br></br> <br></br>
+    <div className= 'Precio'>Oferta {item.price}</div>
     </Grid.Column>
+    
     </Grid> 
     
     <div>

@@ -2,11 +2,16 @@
 import React, {useState, useEffect} from 'react';
 import {ItemDetail} from '../ItemDetail/ItemDetail';
 
+
+
+
+
+
 const datos = {
 id: 1,
-description: 'Deleitá tus ojos con los intensos detalles gracias a la pantalla FHD+ Super AMOLED, que alcanza los 800 nits¹ para una máxima claridad incluso a plena la luz del día. Eye Comfort Shield² reduce la luz azul y Real Smooth mantiene la vista fluida, ya sea que estés jugando o desplazándote por la pantalla. Todo en la pantalla de Infinity-U de 6,4”.',
+description: '¿Eres de llevar zapatillas llamativas? ¿O más bien discretas? No importa: con el servicio de cocreación de Nike, podrás personalizarlas a tu gusto.',
 price: '$147',
-img: <img src='https://react.semantic-ui.com/images/wireframe/image.png' />
+image: "https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/w_300,c_limit/1c5a0e5d-f06c-4853-b75f-4e74f17e8aec/zapatillas-personalizables-nike-by-you.jpg"
 
 }
 

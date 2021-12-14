@@ -2,4 +2,14 @@
     border-radius: 80%;
     padding: 2%;
     margin-top: 100px;
+
+}
+
+.Precio {
+    font-size: 40px;
+    color: rgb(23, 80, 0);
+}
+
+h2{
+    color: rgb(51, 51, 51);
 }

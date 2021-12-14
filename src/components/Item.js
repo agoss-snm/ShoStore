@@ -1,10 +1,12 @@
 
 import {Card, Icon, Image} from 'semantic-ui-react';
+import { Grid} from 'semantic-ui-react';
 
 
       const Item = ( {prop}) => {
         return(
-          <div className='containerCard card col-3 mx-1 my-1' >
+         
+             <Grid.Column width={4}>
           <Card.Group >
             <Card className='col-12'>
               <Image src={prop.image}  wrapped ui={false}/>
@@ -25,7 +27,8 @@ import {Card, Icon, Image} from 'semantic-ui-react';
                 </Card.Content>
                 </Card>
                 </Card.Group>
-                </div>
+                </Grid.Column>
+                
         )
     }
 
