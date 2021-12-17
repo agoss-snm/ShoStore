@@ -6,11 +6,12 @@ import { Grid} from 'semantic-ui-react';
       const Item = ( {prop}) => {
         return(
          
-             <Grid.Column width={4}>
+            <Grid>
           <Card.Group >
-            <Card className='col-12'>
+            <Card className='col-4'>
               <Image src={prop.image}  wrapped ui={false}/>
                 <Card.Content>
+                
                   <Card.Header>{prop.price}</Card.Header>
                   <Card.Meta>
                   <span className='price'>{prop.title}</span>
@@ -27,7 +28,7 @@ import { Grid} from 'semantic-ui-react';
                 </Card.Content>
                 </Card>
                 </Card.Group>
-                </Grid.Column>
+                </Grid>
                 
         )
     }
