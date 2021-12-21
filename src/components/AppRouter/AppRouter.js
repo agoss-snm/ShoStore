@@ -18,9 +18,7 @@ export default function AppRouter() {
          </header>   
          <Switch>
         <Route exact path='/'><ItemList/></Route>
-        <div className='main'>
         <Route path='/category/:categoryId' > <ItemList/> </Route>
-        </div>
         <div className= 'appFondo' >
         <Route path='/item/:itemId'><ItemDetailContainer/></Route>
         </div>

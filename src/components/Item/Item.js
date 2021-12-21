@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom';
         return(
          
           <Card.Group className='cardGroup'>
-            <Card className='col-4'>
+            <Card className='col-3'>
               <Image className='image'src={prop.image}  wrapped ui={false} />
                 <Card.Content>
                 
