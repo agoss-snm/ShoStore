@@ -1,0 +1,25 @@
+
+
+.title{
+    color: rgb(59, 59, 59) !important;
+    font-size: 20px !important ;
+    font-weight: bold;
+}
+
+.price{
+    color: rgb(76, 109, 0) !important;
+    font-size: 30px !important; ;
+}
+
+.extra{
+    font-size: 20px !important;
+    color: rgb(102, 102, 102) !important;
+} 
+.image{
+    height: 300px !important;
+    width: 200px !important;
+}
+
+.cardGroup{
+    padding: 10px;
+}

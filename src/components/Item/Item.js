@@ -1,34 +1,32 @@
 
 import {Card, Icon, Image} from 'semantic-ui-react';
 import { Grid} from 'semantic-ui-react';
+import './Item.css';
+import {Link} from 'react-router-dom';
 
 
       const Item = ( {prop}) => {
         return(
          
-            <Grid>
-          <Card.Group >
+          <Card.Group className='cardGroup'>
             <Card className='col-4'>
-              <Image src={prop.image}  wrapped ui={false}/>
+              <Image className='image'src={prop.image}  wrapped ui={false} />
                 <Card.Content>
                 
-                  <Card.Header>{prop.price}</Card.Header>
+                  <Card.Header className='price'> ${prop.price}</Card.Header>
                   <Card.Meta>
-                  <span className='price'>{prop.title}</span>
+                  <Link to='item/:id'><a><span className='title'>{prop.title}</span></a></Link>
                 </Card.Meta>
                 <Card.Description>  </Card.Description> 
         
                 </Card.Content>
-                <Card.Content extra>
-                <a>
+                <Card.Content extra className='extra'>
                     <Icon name='percent' />
                       22  OFF
-                    </a>
                    
                 </Card.Content>
                 </Card>
                 </Card.Group>
-                </Grid>
                 
         )
     }

@@ -1,6 +1,6 @@
 import React, {useState } from "react";
 import { Grid, Image } from 'semantic-ui-react';
-import {ItemCount} from '../ItemCount';
+import {ItemCount} from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 

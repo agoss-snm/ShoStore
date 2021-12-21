@@ -1,39 +1,30 @@
 
-ul{
-    list-style:none; /* Eliminamos los bullets */
-    margin:0px; /* Quitamos los margenes */
-    padding:0px; /* Quitamos el padding */
-    }
+    
     li{
         list-style-type: none;
-        background-color: rgb(255, 255, 255)   ; 
-    }
-    
-    ul li{
-        padding-top:10px;
-    }
-    
-    a{
-        color: rgb(0, 0, 0);
-        text-decoration: none!important;
-        font-size: 20px;
-        
-    }
-    
-    a:hover{
-    background-color: rgb(177, 79, 79) !important;
-    text-decoration: none!important;
-    border-radius: 10%;
-    font-size: 20px;
-    }
-    
-    ul li {
+        background-color: rgb(56, 56, 56)    ; 
         text-align: right !important;
         padding-left:20px;
         padding-right:20px;
-        border-right:1px solid #fffafa;
         display: inline;
-        }
+    }
+
+    
+    
+    Button{
+        text-decoration: none!important;
+        font-size: 20px;
+        color: darkorange !important;
+        
+    }
+    
+    Button:hover{
+    background-color: rgb(177, 79, 79) !important;
+    text-decoration: none!important;
+    border-radius: 10%;
+    }
+    
+   
     
       
     

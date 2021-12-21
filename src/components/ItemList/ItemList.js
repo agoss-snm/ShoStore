@@ -1,8 +1,10 @@
 
-import Item from '../components/Item';
+import Item from '../Item/Item';
 import React, {useState, useEffect} from 'react';
 import { Grid} from 'semantic-ui-react';
 import {useParams} from 'react-router-dom';
+import {Card, Icon, Image} from 'semantic-ui-react';
+import './ItemList.css';
 
 
 const ItemList=()=>{
@@ -21,16 +23,17 @@ const ItemList=()=>{
 return(
   <>
     
-  <Grid.Column width={9}>
-  <div className='CardContainer'>
-    {products.map ((product)=>{
-      return <Item key={product.id} prop={product}/>;
-    })}
-     
-
-      </div>
-      </Grid.Column>
     
+  <Grid container columns={3}>
+    {products.map ((product)=>{
+      return  <div className='container'>
+      
+      <Item key={product.id} prop={product}/>
+      </div>
+    })}
+     </Grid>
+
+      
     </>
   
  
