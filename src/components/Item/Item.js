@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
           
           <Card.Group className='cardGroup'>
             <Card className='col-3'>
-              <Image className='image'src={prop.image}  wrapped ui={false} />
+            <Link to='item/:id'><Image className='image'src={prop.image} /> </Link>
                 <Card.Content>
                 
                   <Card.Header className='price'> ${prop.price}</Card.Header>

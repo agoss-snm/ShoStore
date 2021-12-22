@@ -35,7 +35,7 @@ const ItemListContainer = () => {
 
             <Link onClick={()=>{setActiveCategory('all')}} className='link' to={`/category/ViewAll`}>
 
-                <Button color={(params.id === 'ViewAll') } >VIEW ALL</Button>
+                <Button color={(params.id === 'ViewAall') }  >VIEW ALL</Button>
 
             </Link>
 
