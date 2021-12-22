@@ -31,11 +31,11 @@ const ItemListContainer = () => {
                 
             
 
-        <div className='category-container'>
+        <div className='category'>
 
-            <Link onClick={()=>{setActiveCategory('all')}} className='link' to={`/category/all`}>
+            <Link onClick={()=>{setActiveCategory('all')}} className='link' to={`/category/ViewAll`}>
 
-                <Button color={(params.id === 'all') && 'secondary'} variant='outlined' >all</Button>
+                <Button color={(params.id === 'ViewAll') } >VIEW ALL</Button>
 
             </Link>
 
@@ -50,7 +50,7 @@ const ItemListContainer = () => {
 
                             <Button 
                             color={(activeCategory === category && params.id !== "all") && 'secondary'} 
-                            variant='outlined' >{category}</Button>
+                            >{category}</Button>
 
                         </Link>
                     )
