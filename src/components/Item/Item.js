@@ -9,11 +9,11 @@ import {Link} from 'react-router-dom';
         return(
           
           <Card.Group className='cardGroup'>
-            <Card className='col-3'>
+            <Link to='item/:id'><Card className='col-3'>
             <Link to='item/:id'><Image className='image'src={prop.image} /> </Link>
                 <Card.Content>
                 
-                  <Card.Header className='price'> ${prop.price}</Card.Header>
+                <Link to='item/:id'><Card.Header className='price'> ${prop.price}</Card.Header> </Link>
                   <Card.Meta>
                   <Link to='item/:id'><a><span className='title'>{prop.title}</span></a></Link>
                 </Card.Meta>
@@ -25,7 +25,7 @@ import {Link} from 'react-router-dom';
                       22  OFF
                    
                 </Card.Content>
-                </Card>
+                </Card></Link>
                 </Card.Group>
                 
         )
