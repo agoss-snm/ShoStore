@@ -1,3 +1,25 @@
 .container{
     margin-top: 15px !important;
 }
+
+.item{display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.8rem;}
+
+.item-container{
+    margin: 1.5rem;
+    width: 250px;
+
+}
+
+.item-text-container{
+    text-align: center;
+}
+
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

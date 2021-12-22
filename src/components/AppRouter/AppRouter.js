@@ -1,6 +1,8 @@
 import Navbar from '../NavBar/NavBar';
-import ItemList from '../ItemList/ItemList';
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import AboutUs from '../Pages/AboutUs';
+import Contact from '../Pages/Contact';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,10 +19,12 @@ export default function AppRouter() {
          <Navbar/>
          </header>   
          <Switch>
-        <Route exact path='/'><ItemList/></Route>
-        <Route path='/category/:categoryId' > <ItemList/> </Route>
+        <Route exact path='/'><ItemListContainer/></Route>
+        <Route path='/category/:categoryId' > <ItemListContainer/> </Route>
         <div className= 'appFondo' >
         <Route path='/item/:itemId'><ItemDetailContainer/></Route>
+        <Route path='/AboutUs'><AboutUs/></Route>
+        <Route path='/Contact'><Contact/></Route>
         </div>
         </Switch>
         </Router>

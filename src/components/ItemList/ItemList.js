@@ -1,44 +1,37 @@
-
-import Item from '../Item/Item';
-import React, {useState, useEffect} from 'react';
-import { Grid} from 'semantic-ui-react';
-import {useParams} from 'react-router-dom';
-import {Card, Icon, Image} from 'semantic-ui-react';
-import './ItemList.css';
+import { CircularProgress} from "@mui/material"
+import Item from '../Item/Item'
+import './ItemList.css'
+import { Button, Grid } from '@mui/material';
+import {Link} from 'react-router-dom'
 
 
-const ItemList=()=>{
-  const [products, setProducts] =useState([]);
-  const{categoryId}=useParams()
+const ItemList = ({datos, loader}) => {
 
-  useEffect(()=>{
-    setTimeout (()=>{
-    fetch('https://fakestoreapi.com/products')
-    .then((response) => response.json())
-    .then ((respuesta) => setProducts(respuesta))
-    },2000);
-},[categoryId]);
+    return(
+        <>
+        { loader ? <div className='loading'><CircularProgress /></div> : 
+        <div className='item'>
+         
+            {datos.map( product => {
+                return (
+                  
+                       <Link className='link' to={`/product/${product.id}`} key={product.id}> 
+                        <Item key={product.id} data={product} prop={product} />
+                        </Link>
+                    
+                )
+            }
 
 
-return(
-  <>
-    
-    
-  <Grid container columns={3}>
-    {products.map ((product)=>{
-      return  <div className='container'>
-      
-      <Item key={product.id} prop={product}/>
-      </div>
-    })}
-     </Grid>
+            )}
+        </div>
+        
 
-      
-    </>
-  
- 
-  
-);
-};
-  
-  export default ItemList;
+        }
+        
+        </>
+    )
+} 
+
+
+export default ItemList

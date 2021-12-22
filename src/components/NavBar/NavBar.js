@@ -10,9 +10,8 @@ import { Button } from '@mui/material';
           <nav className="NavbarItems">
     <ul>
       <li><Link to='/'><Button>Home</Button></Link></li>
-      <li><Link to= '/category/:categoryId'><Button>Men's</Button></Link></li>
-      <li><Link to= '/category/:categoryId'><Button>Woman's</Button></Link></li>
-      <li><Link to= '/category/:categoryId'><Button>Kid's</Button></Link></li>
+      <li><Link to= '/AboutUs'><Button>About Uss</Button></Link></li>
+      <li><Link to= '/Contact'><Button>Contact</Button></Link></li>
       <li> <Button><CartWidget/></Button></li>
     </ul>
     </nav>
