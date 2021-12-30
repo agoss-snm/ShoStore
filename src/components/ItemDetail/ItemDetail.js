@@ -2,11 +2,15 @@ import React, {useState } from "react";
 import { Grid, Image } from 'semantic-ui-react';
 import {ItemCount} from '../ItemCount/ItemCount';
 import './ItemDetail.css';
+import { Button } from 'semantic-ui-react';
 
 
 export const ItemDetail =({item})=>{
-  
- 
+  const[show,setShow]=useState(true);
+  const addHandler=(contador)=>{
+    console.log(item,contador)
+    setShow(false);
+  }
 
   return <div className='DetailC'>
   <Grid>
@@ -21,12 +25,19 @@ export const ItemDetail =({item})=>{
     
     </Grid> 
     
+    
+    
+    {show ? (
     <div>
-    <ItemCount stock={7} initial={0}/>
+    <ItemCount stock={7} initial={0} onAdd={addHandler}/>
+    
     </div>
+    ):(
 <div>
-<button>Terminar la compra</button>
+<Button>Terminar la compra</Button>
 
 </div>
+    )}
   </div>
+  
 };

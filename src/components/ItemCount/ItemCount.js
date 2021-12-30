@@ -2,7 +2,7 @@
 import { Button } from 'semantic-ui-react';
 import React, {useState } from "react";
 
-export const ItemCount=({stock, initial})=>{
+export const ItemCount=({stock, initial, onAdd})=>{
     const [counter, setCounter]= React.useState(initial);
     
     function handleIncrement() {
@@ -22,6 +22,10 @@ export const ItemCount=({stock, initial})=>{
     }
 }
 
+function agregar(){
+    onAdd(counter);
+ }
+
     return (
         <div className='ItemCount'>
         <div className='ContadorContainer'>
@@ -30,6 +34,7 @@ export const ItemCount=({stock, initial})=>{
         
            <Button onClick={handleDecrement}> -</Button>
             <Button onClick={handleIncrement}> +</Button>
+            <Button  onClick={ agregar } >Agregar al Carrito</Button>
 
            
          </div>
