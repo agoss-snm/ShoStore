@@ -3,6 +3,8 @@ import { Grid, Image } from 'semantic-ui-react';
 import {ItemCount} from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { Button } from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
+import AppRouter from '../AppRouter/AppRouter';
 
 
 export const ItemDetail =({item})=>{
@@ -34,8 +36,7 @@ export const ItemDetail =({item})=>{
     </div>
     ):(
 <div>
-<Button>Terminar la compra</Button>
-
+<Link to= '/Cart'><Button>Terminar la compra</Button></Link>
 </div>
     )}
   </div>
