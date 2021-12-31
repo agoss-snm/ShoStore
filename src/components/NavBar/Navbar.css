@@ -33,4 +33,113 @@
             A:hover { color: black; font-family: arial; text-decoration: none !important};
 
             
-       
+            
+              .cart-icon:hover{
+                box-shadow: 0px 5px 30px 2px rgba(0,0,0,0.37);
+              
+              }
+            
+            .cart-span{
+                position: absolute;
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+                width: 2rem;
+                height: 1.5rem;
+                text-align: center;
+                font-size: 0.9rem;
+                position: absolute;
+                top: 4px;
+                right: 40px;
+                cursor: pointer;
+                padding: 2px;
+            
+            }
+            
+            .widget-container{
+                max-height: 50vh;
+                width: 30vw;
+                position: absolute;
+                right: 3rem;
+                top: 4rem;
+                padding: 1rem;
+                overflow-y: auto;
+                
+                background: white;
+                color: black;
+                z-index: 1 !important;
+            
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                
+            
+                border: grey solid 1px;
+            
+                
+                
+            }
+            
+            .widget-item {
+                height: 100px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                overflow: hidden;
+                flex-shrink: 0;
+                
+            
+            }
+            
+            .item-text-container{
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                height: 100%;
+                justify-content: center;
+                height: 1rem;
+                cursor:default;
+            }
+            
+            .widget-item > img{
+                height: 6rem;
+                margin-right: 0.5rem;
+                
+            }
+            
+            .widget-span{
+                color: white;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                padding: 0.3rem;
+                
+                
+            
+            }
+            
+            .quantity{
+                background: #7B1FA2;
+                margin-right: 0.2rem;
+                cursor:default;
+            }
+            
+            .delete{
+                background-color: red;
+                margin-left: 0.3rem;
+                cursor: pointer;
+            }
+            .delete:hover{
+                background-color: rgba(255, 0, 0, 0.521);
+            }
+            
+            .cart-text {
+                font-size: 0.9em;
+                text-align: right;
+            }
+            
+            .emptycart-text{
+                width: 100%;
+                text-align: center;
+            }
+            

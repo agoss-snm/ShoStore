@@ -11,6 +11,7 @@ import {useState, useContext} from 'react';
 export const ItemDetail =({item})=>{
   const[show,setShow]=useState(true);
   const {addProducts}= useContext (CartContext);
+  const {cartList, setCartList}=useContext(CartContext)
 
   const addHandler=(contador)=>{
     console.log(item,contador)
@@ -18,8 +19,8 @@ export const ItemDetail =({item})=>{
   }
 
 const sendItem= () =>{
-  addProducts (item)
-  console.log ('productos agregados:', item)
+  addProducts (cartList)
+  console.log ('productos agregados:', cartList)
 }
 
 
