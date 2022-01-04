@@ -9,6 +9,8 @@ import {
   Route,
 } from 'react-router-dom';
 import './appRouter.css';
+import CartPage from '../Pages/CartPage';
+import { CartProvider } from '../CartContext/cartContext';
 
 
 
@@ -25,6 +27,7 @@ export default function AppRouter() {
         <Route path='/item/:itemId'><ItemDetailContainer/></Route>
         <Route path='/AboutUs'><AboutUs/></Route>
         <Route path='/Contact'><Contact/></Route>
+        <Route path='/cart' ><CartPage/></Route>
         </div>
         </Switch>
         </Router>

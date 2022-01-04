@@ -11,31 +11,28 @@ import {useState, useContext} from 'react';
 export const ItemDetail =({item})=>{
   const[show,setShow]=useState(true);
   const {addProducts}= useContext (CartContext);
-  const {cartList, setCartList}=useContext(CartContext)
+  const {cartList, setCartList, products}=useContext(CartContext)
 
-  const addHandler=(contador)=>{
-    console.log(item,contador)
+  const onAdd=(contador)=>{
+    console.log( 'items desde OnAdd', item,contador)
     setShow(false);
   }
 
 const sendItem= () =>{
-  addProducts (cartList)
-  console.log ('productos agregados:', cartList)
+  addProducts (item)
+  console.log ('productos agregados:', products)
 }
-
-
-
-
-
 
 
 
   return <div className='DetailC'>
   <Grid>
   <Grid.Column width={4}>
+ 
       <Image src= {item.image} />
     </Grid.Column>
     <Grid.Column width={9}>
+    <h1> {item.title}</h1>
     <h2>{item.description}</h2>
     <br></br> <br></br> <br></br>
     <div className= 'Precio'>Oferta {item.price}</div>
@@ -47,12 +44,12 @@ const sendItem= () =>{
     
     {show ? (
     <div>
-    <ItemCount stock={7} initial={0} onAdd={addHandler}/>
+    <ItemCount stock={7} initial={0} onAdd={onAdd}/>
     
     </div>
     ):(
 <div>
-<Button>Terminar la compra</Button>
+<Button onClick={sendItem}>Terminar la compra</Button>
 </div>
     )}
   </div>

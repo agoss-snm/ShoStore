@@ -4,6 +4,7 @@ import {ItemDetail} from '../ItemDetail/ItemDetail';
 import {useParams} from 'react-router-dom';
 
 const datos = {
+    title: 'Remera T23',
 id: 1,
 description: '¿Eres de llevar zapatillas llamativas? ¿O más bien discretas? No importa: con el servicio de cocreación de Nike, podrás personalizarlas a tu gusto.',
 price: '$147',

@@ -5,9 +5,11 @@ const CartContext= createContext();
 const CartProvider= ({children})=> {
     const [products,setProducts]=useState([])
 
-    const addProducts=() =>{
-        setProducts([...products, products])
+    const addProducts=(product) =>{
+     setProducts([...products, product])
     }
+
+
     const data={
         products,
         addProducts

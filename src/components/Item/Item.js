@@ -5,17 +5,17 @@ import './Item.css';
 import {Link} from 'react-router-dom';
 
 
-      const Item = ( {prop}) => {
+      const Item = ( {data}) => {
         return(
           
           <Card.Group className='cardGroup'>
             <Link to='item/:id'><Card className='col-3'>
-            <Link to='item/:id'><Image className='image'src={prop.image} /> </Link>
+            <Link to='item/:id'><Image className='image'src={data.image} /> </Link>
                 <Card.Content>
                 
-                <Link to='item/:id'><Card.Header className='price'> ${prop.price}</Card.Header> </Link>
+                <Link to='item/:id'><Card.Header className='price'> ${data.price}</Card.Header> </Link>
                   <Card.Meta>
-                  <Link to='item/:id'><a><span className='title'>{prop.title}</span></a></Link>
+                  <Link to='item/:id'><a><span className='title'>{data.title}</span></a></Link>
                 </Card.Meta>
                 <Card.Description>  </Card.Description> 
         
