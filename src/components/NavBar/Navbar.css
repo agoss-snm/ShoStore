@@ -2,24 +2,27 @@
     
     li{
         list-style-type: none;
-        background-color: rgb(56, 56, 56)    ; 
+        background-color: rgb(221, 221, 221)    ; 
         text-align: right !important;
         padding-left:20px;
         padding-right:20px;
         display: inline;
     }
 
+    ul {
+        margin-top: 0px !important;
+    }
     
-    
-    Button{
+    .buttonB{
         text-decoration: none!important;
         font-size: 20px;
         color: darkorange !important;
         
     }
     
-    Button:hover{
-    background-color: rgb(177, 79, 79) !important;
+ .buttonB:hover{
+    background-color: rgba(241, 245, 6, 0.89) !important;
+    color: rgb(189, 19, 19) !important;
     text-decoration: none!important;
     border-radius: 10%;
     }
@@ -41,14 +44,13 @@
                 background: white;
                 right: 20px;
                 top: 75px;
-                padding: 10px 0px;
                 box-sizing: border-box;
                 border-radius: 5px;
                 box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
             }
             
             .box-cart * {
-                color: black;
+                color: rgb(172, 38, 38);
             }
             
             .box-cart .item-cart-list {
@@ -76,3 +78,11 @@
                 max-height: 500px;
                 overflow-y: auto;
             }
+
+            .banner{
+                 margin: auto;
+                display: block;
+            }
+
+
+            

@@ -1,25 +1,62 @@
 
 
-.title{
+.titleD{
     color: rgb(59, 59, 59) !important;
     font-size: 20px !important ;
     font-weight: bold;
 }
 
 .price{
-    color: rgb(76, 109, 0) !important;
-    font-size: 30px !important; ;
+    color: rgb(121, 109, 0) !important;
+    font-size: 30px !important; 
+    height: 50px;
 }
 
 .extra{
     font-size: 20px !important;
-    color: rgb(102, 102, 102) !important;
+    color: rgb(4, 122, 10) !important;
 } 
 .image{
-    height: 300px !important;
-    width: 200px !important;
+    height: 235px !important;
+   align-content: center !important;
+   text-align: center !important;
 }
 
+
 .cardGroup{
-    padding: 10px;
+    padding: 20px;
+    justify-content: center !important;
+}
+
+.col-4{
+    height: 480px !important;
+    text-align: center !important;
+    align-content: center !important;
+}
+
+
+.cardContent{
+    background-image: white!important;
+}
+
+.image {
+    text-align: center !important;
+}
+
+.Di{
+    text-align: center!important;
+    align-content: center !important;
+}
+
+.ui.card>.image, .ui.cards>.card>.image {
+    background-color: rgb(255, 255, 255)!important;
+    text-align: center !important;
+    align-content: center !important;
+    margin: auto;
+    display: block;
+   
+}
+
+.heartButton{
+    margin-top: 10px !important;
 }

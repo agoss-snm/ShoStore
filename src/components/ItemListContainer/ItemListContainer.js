@@ -2,6 +2,7 @@ import ItemList from '../ItemList/ItemList'
 import { useState , useEffect} from 'react'
 import { Button } from '@mui/material'
 import {Link, useParams} from 'react-router-dom'
+import './itemlistcontainer.css'
 
 
 const ItemListContainer = () => {
@@ -35,7 +36,7 @@ const ItemListContainer = () => {
 
             <Link onClick={()=>{setActiveCategory('all')}} className='link' to={`/category/ViewAll`}>
 
-                <Button color={(params.id === 'ViewAall') }  >VIEW ALL</Button>
+                <Button className='buttonE' color={(params.id === 'ViewAall') }  >VIEW ALL</Button>
 
             </Link>
 
@@ -48,7 +49,7 @@ const ItemListContainer = () => {
                         to={`/category/${category}`}
                         key={category}>
 
-                            <Button 
+                            <Button className='buttonE'
                             color={(activeCategory === category && params.id !== "all") && 'secondary'} 
                             >{category}</Button>
 
