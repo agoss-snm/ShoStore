@@ -2,6 +2,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useEffect, useState, useContext } from 'react';
 import './Navbar.css';
 import CartContext from '../CartContext/cartContext';
+import ModalCart from '../ModalCart/ModalCart';
 
 const CarWidget=()=>{
     const [showCart, setShowCart]= useState (false)
@@ -21,18 +22,7 @@ console.log ( 'agregados desde cartWidget',products)
 return (
     <div className= 'cart-container'>
     <ShoppingCartIcon onClick={openCart}/>
-    <div className={`box-cart ${showCart && 'active'}`}>
-        {products.map((product)=>{
-            return(
-    <div className= 'item-cart-list'>
-        <p>{product.title}</p>
-        <span>{product.price} </span>
-        </div>
-            )
-        })}
-    
-    
-    </div>
+   {showCart && <ModalCart products={products}/>}
     
     </div>
     )
