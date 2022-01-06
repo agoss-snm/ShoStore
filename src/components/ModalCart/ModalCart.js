@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Segment } from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 
-export default function ModalCart({products, total}) {
+export default function ModalCart({products, total, cleanCart}) {
 return (
 <div className={`box-cart active`}>
     {products.length ===0? (
@@ -21,6 +21,7 @@ return (
         <div>
             <><p>total: <spam>${total}</spam></p>
             </>
+           <Button  onClick={cleanCart}>Clean Cart</Button>
             <Link to='/Cart'><Button>Finish</Button></Link>
         </div>
         </>

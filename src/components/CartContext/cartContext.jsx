@@ -12,11 +12,15 @@ const CartProvider= ({children})=> {
      console.log ('total compra',totalPrice +product.price) 
     }
 
+    const cleanCart =(product, setProducts) =>{
+        setProducts([])
+    }
 
     const data={
         products,
         addProducts,
-        totalPrice
+        totalPrice,
+        cleanCart
     }
 
     return(
