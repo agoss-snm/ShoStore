@@ -1,41 +1,5 @@
 
     
-    li{
-        list-style-type: none;
-        background-color: rgb(221, 221, 221)    ; 
-        text-align: right !important;
-        padding-left:20px;
-        padding-right:20px;
-        display: inline;
-    }
-
-    ul {
-        margin-top: 0px !important;
-    }
-    
-    .buttonB{
-        text-decoration: none!important;
-        font-size: 20px;
-        color: darkorange !important;
-        
-    }
-    
- .buttonB:hover{
-    background-color: rgba(241, 245, 6, 0.89) !important;
-    color: rgb(189, 19, 19) !important;
-    text-decoration: none!important;
-    border-radius: 10%;
-    }
-    
-   
-    
-      
-    
-            A:link {text-decoration: none!important };
-            A:visited {color: black;  font-family: arial; text-decoration: none!important };
-            A:hover { color: black; font-family: arial; text-decoration: none !important};
-
-            
             .box-cart {
                 position: absolute;
                 z-index: 1;
@@ -84,5 +48,42 @@
                 display: block;
             }
 
+
+            
+            
+    li{
+        list-style-type: none;
+        background-color: rgb(221, 221, 221)    ; 
+        text-align: right !important;
+        padding-left:20px;
+        padding-right:20px;
+        display: inline;
+    }
+
+    ul {
+        margin-top: 0px !important;
+    }
+    
+    .buttonB{
+        text-decoration: none!important;
+        font-size: 20px;
+        color: darkorange !important;
+        
+    }
+    
+ .buttonB:hover{
+    background-color: rgba(241, 245, 6, 0.89) !important;
+    color: rgb(189, 19, 19) !important;
+    text-decoration: none!important;
+    border-radius: 10%;
+    }
+    
+   
+    
+      
+    
+            A:link {text-decoration: none!important };
+            A:visited {color: black;  font-family: arial; text-decoration: none!important };
+            A:hover { color: black; font-family: arial; text-decoration: none !important};
 
             

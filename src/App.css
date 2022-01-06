@@ -41,3 +41,13 @@
 .appFondo{
   background-color: rgb(175, 115, 160) !important;
 }
+
+
+
+.box-cart.active {
+  display: block;
+}
+
+.box-cart {
+  display: none;
+}
