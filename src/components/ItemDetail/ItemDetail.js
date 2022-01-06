@@ -13,7 +13,7 @@ export const ItemDetail =({item})=>{
   const {addProducts}= useContext (CartContext);
   const {cartList, setCartList, products}=useContext(CartContext)
 
-  const onAdd=(contador)=>{
+  const onAdd=({contador})=>{
     console.log( 'items desde OnAdd', item,contador)
     setShow(false);
   }

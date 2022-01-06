@@ -9,7 +9,7 @@ const CarWidget=()=>{
     useEffect (()=>{
 
     })
-    const {products} =useContext (CartContext)
+    const {products, totalPrice} =useContext (CartContext)
 
 
 const openCart =()=> {
@@ -22,7 +22,7 @@ console.log ( 'agregados desde cartWidget',products)
 return (
     <div className= 'cart-container'>
     <ShoppingCartIcon onClick={openCart}/>
-   {showCart && <ModalCart products={products}/>}
+   {showCart && <ModalCart products={products} total={totalPrice}/>}
     
     </div>
     )
