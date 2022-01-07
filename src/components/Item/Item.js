@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom';
           
           <Card.Group className='cardGroup'>
             <Card className='col-4'>
-              <div className='image'>
+              <div className='imageS'>
             <Link to='item/:id'><Image  className='Di' src={data.image} /> </Link>
             </div>
 

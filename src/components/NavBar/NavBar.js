@@ -5,12 +5,13 @@ import {Link} from 'react-router-dom';
 import { Button } from '@mui/material';
 import { Icon } from 'semantic-ui-react'
 import { Image } from 'semantic-ui-react'
-import  bannerZap1 from'../img/bannerZap1.png'
+import  zap from'../img/zap.jpg'
+import Publicidad from '../Publicidad/Publicidad';
 
           const Navbar=()=>{
-    return ( <div>
+    return ( <div className='headerApp'>
 
-        <Image className='banner' src={bannerZap1}  />
+        <Image className='banner'  src={zap}  />
 
           <nav className="NavbarItems">
     <ul>
@@ -20,6 +21,8 @@ import  bannerZap1 from'../img/bannerZap1.png'
       <li> <Button className='buttonB'><CartWidget/></Button></li>
     </ul>
     </nav>
+  
+<Publicidad/>
     </div>
     )
   }
