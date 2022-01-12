@@ -1,17 +1,13 @@
-
-
 .titleD{
     color: rgb(59, 59, 59) !important;
     font-size: 20px !important ;
     font-weight: bold;
 }
-
 .price{
     color: rgb(121, 109, 0) !important;
     font-size: 30px !important; 
     height: 50px;
 }
-
 .extra{
     font-size: 20px !important;
     color: rgb(4, 122, 10) !important;
@@ -21,28 +17,21 @@
    align-content: center !important;
    text-align: center !important;
 }
-
-
 .cardGroup{
     padding: 20px;
     justify-content: center !important;
 }
-
 .col-4{
     height: 480px !important;
     text-align: center !important;
     align-content: center !important;
 }
-
-
 .cardContent{
     background-color: rgb(177, 177, 177)!important;
 }
-
 .image {
     text-align: center !important;
 }
-
 .Di{
     text-align: center!important;
     align-content: center !important;
@@ -56,7 +45,6 @@
     display: block;
    
 }
-
 .heartButton{
     margin-top: 10px !important;
 }

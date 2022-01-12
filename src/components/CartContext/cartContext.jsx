@@ -7,9 +7,9 @@ const CartProvider= ({children})=> {
     const [totalPrice, setTotalPrice] =useState (0)
 
     const addProducts=(product) =>{
-     setProducts([...products, product])
-     setTotalPrice (totalPrice +product.price)
-     console.log ('total compra',totalPrice +product.price) 
+        setProducts([...products, product])
+        setTotalPrice (totalPrice +product.price)
+        console.log ('total compra',totalPrice +product.price) 
     }
 
     const cleanCart =(product, setProducts) =>{
@@ -26,7 +26,7 @@ const CartProvider= ({children})=> {
     return(
         <CartContext.Provider value={data}>
             {children}
-            </CartContext.Provider>
+        </CartContext.Provider>
     )
 }
 

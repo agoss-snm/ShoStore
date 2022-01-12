@@ -1,5 +1,3 @@
-import Navbar from "../NavBar/NavBar";
-import Footer from '../Footer/Footer';
 import React from "react";
 
 

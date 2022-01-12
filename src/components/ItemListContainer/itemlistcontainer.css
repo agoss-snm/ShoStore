@@ -13,7 +13,6 @@
   animation: pulse 1s !important;
   box-shadow: 1 10 10 2em rgba(rgb(189, 52, 52)) !important;
   border: 2px solid yellow;
-
 }
 
 @keyframes pulse {

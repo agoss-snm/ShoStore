@@ -1,9 +1,9 @@
-import './Footer.css';
 import React from 'react'
+//Style
+import './Footer.css';
+//Semantic UI
 import { Flag, Segment } from 'semantic-ui-react';
 import { Icon, Step } from 'semantic-ui-react'
-
-
 
 const Footer=()=>{
     return (
@@ -37,9 +37,8 @@ const Footer=()=>{
     </Step>
   </Step.Group>
 
-  <h3>All rights reserved <spam>@ShooStore</spam></h3>
+    <h3>All rights reserved <spam>@ShooStore</spam></h3>
     </div>
-
     )
   }
 
