@@ -16,7 +16,7 @@ const ItemListContainer = ({title}) => {
     const [prod, setProd] = useState([])
     //
     const [loading, setLoading] = useState(false)
-    const [categoria, setCategoria] = useState(['allP'])
+    const [categoria, setCategoria] = useState('allP')
     const categories = ['Sports', 'Street-Style', 'Retro', 'Clasics']
     
     

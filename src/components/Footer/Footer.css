@@ -5,11 +5,11 @@
 }
 
 .dollar{
-    color: rgb(78, 131, 0) !important;
+    color: rgb(12, 63, 14) !important;
 }
 
 .plane{
-    color:rgb(9, 75, 129) ;
+    color:rgb(37, 37, 37) ;
 }
 
 .tablet{
@@ -31,4 +31,7 @@ h3{
 }
 h3 spam {
     color: rgb(255, 255, 255);
+}
+.billing {
+    color:black!important;
 }

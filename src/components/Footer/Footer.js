@@ -24,7 +24,7 @@ const Footer=()=>{
     <Step active className='footerB'>
       <Icon className='dollar' />
       <Step.Content>
-        <Step.Title>Billing</Step.Title>
+        <Step.Title className='billing' >Billing</Step.Title>
         <Step.Description>Enter billing information</Step.Description>
       </Step.Content>
     </Step>
