@@ -1,7 +1,6 @@
 import { CircularProgress} from "@mui/material"
 import Item from '../Item/Item'
 import './ItemList.css'
-import { Button, Grid } from '@mui/material';
 import {Link} from 'react-router-dom'
 
 

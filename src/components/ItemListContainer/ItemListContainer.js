@@ -10,58 +10,57 @@ import { collection, getDocs } from 'firebase/firestore';
 
 
 
-const ItemListContainer = ({title}) => {
+const ItemListContainer = () => {
     const params = useParams()
+    //state of products
     const [prod, setProd] = useState([])
+    //
     const [loading, setLoading] = useState(false)
-    const [activeCategory, setActiveCategory] = useState('all')
-    const categories = ['Sports', 'Street-Style', 'Retro', 'Clasics']
+    const [categoria, setCategoria] = useState('allP')
+    
     
     
     useEffect(() => {
         setLoading(true)
+        
         const getProd = async() => {
             const prodFirestore = await getDocs(collection( db, 'productos'))
             const productsFirestore = prodFirestore.docs.map(doc => {
                 let product = doc.data()
                 product.id = doc.id
                 return product})
-            setProd(productsFirestore.filter((item) => (params.id === 'all' || activeCategory === 'all') ? 
+
+
+            setProd(productsFirestore.filter((item) => (params.id === 'allP' || categoria === 'allP') ? 
                     productsFirestore : 
-                    item.category === activeCategory))
+                    item.category === categoria))
             setLoading(false)
             
         }
         getProd()
         
         
-    }, [params.id, activeCategory, prod.id])
+    }, [params.id, categoria, prod.id])
+
+
+    const categories = ['Sports', 'Street-Style', 'Retro', 'Clasics']
 
     return (
         <>   
-                
-            
-
         <div className='category'>
         <h3 className='categories'>See All Categories Heare</h3>
-           
-
             {
                 
                 categories.map((category) => {
+                    
                     return(<>
-                        
-                        <Link 
-                        onClick={()=>{setActiveCategory(category)}} 
-                        
-                        className='link' 
-                        to={`/category/${category}`}
-                        key={category}>
 
-                            <Button className='buttonE'
-                            color={(activeCategory === category && params.id !== "all") && 'secondary'} 
-                            >{category}
-                            </Button>
+                         
+
+                        <Link onClick={()=>{setCategoria(category)}} to={`/category/${category}`}key={category}>
+
+                           
+                        <Button className='buttonE'>{category} </Button>
 
                         </Link>
                         </>
