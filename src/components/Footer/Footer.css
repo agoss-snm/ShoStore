@@ -1,6 +1,6 @@
 .FooterContainer{
     height: 300px;
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(7, 7, 7);
     margin-top: 50px;
 }
 
@@ -17,18 +17,18 @@
 }
 
 .footerC{
-    background-color: #fcff3e !important;
+    background-color: #fbff19 !important;
 }
 .footerB{
-    background-color: #ff84d6 !important;
+    background-color: #909090 !important;
 }
 .footerA{
-    background-color: #cbfff4 !important;
+    background-color: #ffffff !important;
 }
 
 h3{
     color: blanchedalmond;
 }
 h3 spam {
-    color: rgb(112, 189, 118);
+    color: rgb(255, 255, 255);
 }

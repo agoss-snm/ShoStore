@@ -10,14 +10,14 @@ import { collection, getDocs } from 'firebase/firestore';
 
 
 
-const ItemListContainer = () => {
-    const id = useParams()
+const ItemListContainer = ({title}) => {
+    const params = useParams()
     //state of products
     const [prod, setProd] = useState([])
     //
     const [loading, setLoading] = useState(false)
-    const [categoria, setCategoria] = useState('allP')
-    
+    const [categoria, setCategoria] = useState(['allP'])
+    const categories = ['Sports', 'Street-Style', 'Retro', 'Clasics']
     
     
     useEffect(() => {
@@ -31,7 +31,7 @@ const ItemListContainer = () => {
                 return product})
 
 
-            setProd(productsFirestore.filter((item) => (id === 'allP' || categoria === 'allP') ? 
+            setProd(productsFirestore.filter((item) => (params.id === 'allP' || categoria === 'allP') ? 
                     productsFirestore : 
                     item.category === categoria))
             setLoading(false)
@@ -40,27 +40,39 @@ const ItemListContainer = () => {
         getProd()
         
         
-    }, [id, categoria, prod.id])
-
-
-    const categories = ['Sports', 'Street-Style', 'Retro', 'Clasics']
+    }, [params.id, categoria, prod.id])
 
     return (
         <>   
+                
+            
+
         <div className='category'>
         <h3 className='categories'>See All Categories Heare</h3>
+           
+
             {
+                
                 categories.map((category) => {
                     return(<>
-                        <Link  to={`/category/${category}`}key={category}>
-                        <Button onClick={()=>{setCategoria(category)}} className='buttonE'>{category} </Button>
+                        
+                        <Link 
+                        onClick={()=>{setCategoria(category)}} to={`/category/${category}`}key={category}>
+
+                            <Button className='buttonE'>{category} </Button>
+
                         </Link>
                         </>
                     )
+        
                 })
             }
+                
+                
                 </div>
+
                 <ItemList datos={prod} loader={loading} />
+                
             
         </>
     )   
