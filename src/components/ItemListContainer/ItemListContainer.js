@@ -4,29 +4,39 @@ import { Button } from '@mui/material'
 import {Link, useParams} from 'react-router-dom'
 import './itemlistcontainer.css'
 
+//firebase import
+import db from '../../firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
-const ItemListContainer = () => {
+
+
+const ItemListContainer = ({title}) => {
     const params = useParams()
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const [activeCategory, setActiveCategory] = useState('all')
-    const categories = ['electronics', 'jewelery', "men's clothing", "women's clothing"]
-    
+    const categories = ['Sports', 'Street-Style']
     
     
     useEffect(() => {
         setLoading(true)
-        fetch('https://fakestoreapi.com/products')
-            .then((response) => response.json())
-            .then((res) => setData(res.filter((item) => (params.id === 'all' || activeCategory === 'all') ? res : item.category === activeCategory)))
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [params.id, activeCategory])
+        const getData = async() => {
+            const dataFirestore = await getDocs(collection( db, 'productos'))
+            const productsFirestore = dataFirestore.docs.map(doc => {
+                let product = doc.data()
+                product.id = doc.id
+                return product})
+            setData(productsFirestore.filter((item) => (params.id === 'all' || activeCategory === 'all') ? 
+                    productsFirestore : 
+                    item.category === activeCategory))
+            setLoading(false)
+            
+        }
+        getData()
+        
+        
+    }, [params.id, activeCategory, data.id])
 
-
-   
- 
     return (
         <>   
                 
