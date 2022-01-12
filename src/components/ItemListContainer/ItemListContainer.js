@@ -12,30 +12,30 @@ import { collection, getDocs } from 'firebase/firestore';
 
 const ItemListContainer = ({title}) => {
     const params = useParams()
-    const [data, setData] = useState([])
+    const [prod, setProd] = useState([])
     const [loading, setLoading] = useState(false)
     const [activeCategory, setActiveCategory] = useState('all')
-    const categories = ['Sports', 'Street-Style']
+    const categories = ['Sports', 'Street-Style', 'Retro', 'Clasics']
     
     
     useEffect(() => {
         setLoading(true)
-        const getData = async() => {
-            const dataFirestore = await getDocs(collection( db, 'productos'))
-            const productsFirestore = dataFirestore.docs.map(doc => {
+        const getProd = async() => {
+            const prodFirestore = await getDocs(collection( db, 'productos'))
+            const productsFirestore = prodFirestore.docs.map(doc => {
                 let product = doc.data()
                 product.id = doc.id
                 return product})
-            setData(productsFirestore.filter((item) => (params.id === 'all' || activeCategory === 'all') ? 
+            setProd(productsFirestore.filter((item) => (params.id === 'all' || activeCategory === 'all') ? 
                     productsFirestore : 
                     item.category === activeCategory))
             setLoading(false)
             
         }
-        getData()
+        getProd()
         
         
-    }, [params.id, activeCategory, data.id])
+    }, [params.id, activeCategory, prod.id])
 
     return (
         <>   
@@ -43,27 +43,28 @@ const ItemListContainer = ({title}) => {
             
 
         <div className='category'>
-
-            <Link onClick={()=>{setActiveCategory('all')}} className='link' to={`/category/ViewAll`}>
-
-                <Button className='buttonE' color={(params.id === 'ViewAall') }  >VIEW ALL</Button>
-
-            </Link>
+        <h3 className='categories'>See All Categories Heare</h3>
+           
 
             {
+                
                 categories.map((category) => {
-                    return(
+                    return(<>
+                        
                         <Link 
                         onClick={()=>{setActiveCategory(category)}} 
+                        
                         className='link' 
                         to={`/category/${category}`}
                         key={category}>
 
                             <Button className='buttonE'
                             color={(activeCategory === category && params.id !== "all") && 'secondary'} 
-                            >{category}</Button>
+                            >{category}
+                            </Button>
 
                         </Link>
+                        </>
                     )
         
                 })
@@ -72,7 +73,7 @@ const ItemListContainer = ({title}) => {
                 
                 </div>
 
-                <ItemList datos={data} loader={loading} />
+                <ItemList datos={prod} loader={loading} />
             
         </>
     )   

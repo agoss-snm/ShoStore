@@ -12,11 +12,11 @@ import {Link} from 'react-router-dom';
           <Card.Group className='cardGroup'>
             <Card className='col-4'>
               <div className='imageS'>
-            <Link to='item/:id'><Image  className='Di' src={data.image} /> </Link>
+            <Link to='item/:id'><Image  className='Di' src= {`'../img/productos/'${data.image}`}/> </Link>
             </div>
 
             <Card.Meta>
-                  <Link to='item/:id'><a><span className='titleD'>{data.title}</span></a></Link>
+                  <Link to='item/:id'><a><span className='titleD'>{data.name}</span></a></Link>
                 </Card.Meta>
                 <Card.Content className='cardContent'>
                 
