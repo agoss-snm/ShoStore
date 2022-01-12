@@ -11,7 +11,7 @@ import { collection, getDocs } from 'firebase/firestore';
 
 
 const ItemListContainer = () => {
-    const params = useParams()
+    const id = useParams()
     //state of products
     const [prod, setProd] = useState([])
     //
@@ -31,7 +31,7 @@ const ItemListContainer = () => {
                 return product})
 
 
-            setProd(productsFirestore.filter((item) => (params.id === 'allP' || categoria === 'allP') ? 
+            setProd(productsFirestore.filter((item) => (id === 'allP' || categoria === 'allP') ? 
                     productsFirestore : 
                     item.category === categoria))
             setLoading(false)
@@ -40,7 +40,7 @@ const ItemListContainer = () => {
         getProd()
         
         
-    }, [params.id, categoria, prod.id])
+    }, [id, categoria, prod.id])
 
 
     const categories = ['Sports', 'Street-Style', 'Retro', 'Clasics']
@@ -50,28 +50,16 @@ const ItemListContainer = () => {
         <div className='category'>
         <h3 className='categories'>See All Categories Heare</h3>
             {
-                
                 categories.map((category) => {
-                    
                     return(<>
-
-                         
-
-                        <Link onClick={()=>{setCategoria(category)}} to={`/category/${category}`}key={category}>
-
-                           
-                        <Button className='buttonE'>{category} </Button>
-
+                        <Link  to={`/category/${category}`}key={category}>
+                        <Button onClick={()=>{setCategoria(category)}} className='buttonE'>{category} </Button>
                         </Link>
                         </>
                     )
-        
                 })
             }
-                
-                
                 </div>
-
                 <ItemList datos={prod} loader={loading} />
             
         </>
