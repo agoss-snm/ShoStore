@@ -2,58 +2,34 @@
 import React, {useState, useEffect} from 'react';
 import {ItemDetail} from '../ItemDetail/ItemDetail';
 import {useParams} from 'react-router-dom';
-import {doc, getDoc} from 'firebase/firestore'
+//firebase
+import { doc, getDoc } from 'firebase/firestore'
+import db from '../../firebase'
 
-const datos = {
-    title: 'Remera T23',
-id: 1,
-description: '¿Eres de llevar zapatillas llamativas? ¿O más bien discretas? No importa: con el servicio de cocreación de Nike, podrás personalizarlas a tu gusto.',
-price: 147,
-image: "https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/w_300,c_limit/1c5a0e5d-f06c-4853-b75f-4e74f17e8aec/zapatillas-personalizables-nike-by-you.jpg"
+export default function ItemDetailContainer () {
+        const [product, setProduct] = useState([])
+        const { id } = useParams()
 
-}
+        async function getProduct(db) {
+            const docRef = doc(db, 'productos', id);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                let producto = docSnap.data();
+                producto.id = docSnap.id
+                setProduct(producto)
+            } else {
+                console.log("No such document!");
+            }
+        }
 
-
-const getItems=()=>{
-    return new Promise ((trajoDatosOk, error)=>{
-        setTimeout(()=>{
-            trajoDatosOk(datos)
-        },2000)
-    })
-}
-
-
-export default function ItemDetailContainer(){
-  const [datosDelItem, setDatosDelItem] =useState([]);
-
-  useEffect(()=>{
-
-    getItems()
-    .then((datos)=>{
-        setDatosDelItem(datos)
-    })
-},[])
-
-
-return <div>
-    <ItemDetail 
-    item={datosDelItem}
-/>
-
-</div>
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        useEffect(() => {
+            getProduct(db)
+        }, [id])
+    
+        return (
+            <div>
+                    <ItemDetail item= {product} />
+                
+            </div>
+        )
+    }

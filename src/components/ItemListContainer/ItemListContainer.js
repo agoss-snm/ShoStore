@@ -19,15 +19,17 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(false);
   const categories = ["Sports", "Street-Style", "Retro", "Clasics"];
 
+
   useEffect(() => {
     setLoading(true);
 
-    const getProd = async () => {
+    async function getProd (db){
       const prodFirestore = await getDocs(collection(db, "productos"));
       const productsFirestore = prodFirestore.docs.map((doc) => {
         let product = doc.data();
         product.id = doc.id;
-        return product;
+        return product;   // contiene toda la info del producto + id  (producto cod profe)
+        
       });
 
       const products = params.categoryId
@@ -39,7 +41,7 @@ const ItemListContainer = () => {
       setProd(products);
       setLoading(false);
     };
-    getProd();
+    getProd(db);
   }, [params.categoryId, prod.id]);
 
   return (

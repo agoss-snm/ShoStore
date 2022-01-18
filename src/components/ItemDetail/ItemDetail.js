@@ -2,7 +2,6 @@ import { Grid, Image } from 'semantic-ui-react';
 import {ItemCount} from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { Button } from 'semantic-ui-react';
-import {Link} from 'react-router-dom';
 import AppRouter from '../AppRouter/AppRouter';
 import CartContext from "../CartContext/cartContext";
 import {useState, useContext} from 'react';
