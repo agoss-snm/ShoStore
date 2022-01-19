@@ -23,7 +23,7 @@ const Item = ( {data}) => {
           </Link>
                 
         <Card.Description> 
-          <Link to='item/:id'><a><span className='titleD'> <Button content='  Ver Producto' icon='right arrow' labelPosition='right' className='butonC'/> </span></a></Link>
+          <Link to={`item/${data.id}`}>  <a><span className='titleD'> <Button content='  Ver Producto' icon='right arrow' labelPosition='right' className='butonC'/> </span></a></Link>
           <Link to=''>
             <Button as='div' className='heartButton' labelPosition='center'>
             <Button color='red' ><Icon name='heart'  />Like</Button>

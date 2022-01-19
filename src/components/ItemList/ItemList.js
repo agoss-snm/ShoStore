@@ -14,23 +14,14 @@ const ItemList = ({datos, loader}) => {
             {datos.map( product => {
                 return (
                   
-                       <Link className='link' to={`/product/${product.id}`} key={product.id}> 
-                        <Item key={product.id} data={product} prop={product} />
+                       <Link className='link' to={`/product/${product.id}`} > 
+                        <Item  data={product} prop={product} />
                         </Link>
-                    
                 )
-            }
-
-
-            )}
+            })}
         </div>
-        
-
         }
-        
         </>
     )
 } 
-
-
 export default ItemList

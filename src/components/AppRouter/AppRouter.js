@@ -25,7 +25,7 @@ export default function AppRouter() {
             <Route exact path='/'><ItemListContainer/></Route>
             <Route path='/category/:categoryId' > <ItemListContainer/> </Route>
             <div className= 'appFondo' >  
-              <Route path='/item/:itemId'><ItemDetailContainer/></Route>
+              <Route path='/item/:id'><ItemDetailContainer/></Route>
               <Route path='/AboutUs'><AboutUs/></Route>
               <Route path='/Contact'><Contact/></Route>
               <Route path='/cart' ><CartPage/></Route>

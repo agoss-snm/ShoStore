@@ -28,7 +28,7 @@ const ItemListContainer = () => {
       const productsFirestore = prodFirestore.docs.map((doc) => {
         let product = doc.data();
         product.id = doc.id;
-        return product;   // contiene toda la info del producto + id  (producto cod profe)
+        return product;   // contiene toda la info del producto + id  
         
       });
 
@@ -40,6 +40,7 @@ const ItemListContainer = () => {
 
       setProd(products);
       setLoading(false);
+      console.log (products)
     };
     getProd(db);
   }, [params.categoryId, prod.id]);
