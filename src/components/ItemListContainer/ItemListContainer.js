@@ -40,7 +40,6 @@ const ItemListContainer = () => {
 
       setProd(products);
       setLoading(false);
-      console.log (products)
     };
     getProd(db);
   }, [params.categoryId, prod.id]);

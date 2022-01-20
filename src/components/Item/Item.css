@@ -22,12 +22,12 @@
     justify-content: center !important;
 }
 .col-4{
-    height: 480px !important;
+    
     text-align: center !important;
     align-content: center !important;
 }
 .cardContent{
-    background-color: rgb(177, 177, 177)!important;
+    background-color: rgb(255, 255, 255)!important;
 }
 .image {
     text-align: center !important;

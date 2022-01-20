@@ -3,7 +3,6 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import { CartProvider } from '../CartContext/cartContext';
 //Pages imports
 import CartPage from '../Pages/CartPage';
 import AboutUs from '../Pages/AboutUs/AboutUs';

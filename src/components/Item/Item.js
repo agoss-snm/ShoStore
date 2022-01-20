@@ -10,10 +10,10 @@ const Item = ( {data}) => {
     <Card.Group className='cardGroup'>
 
 
-      <Link to={`item/${data.id}`}> <Card className='col-4'>
+      <Link to={`/item/${data.id}`}> <Card className='col-4'>
         <div className='imageS'>
-          //
-          <Image  className='Di' src= {`'../img/productos/'${data.image}`}/> 
+          
+          <Image  className='Di' src= {data.image}/> 
         </div>
 
         <Card.Meta>
@@ -26,13 +26,12 @@ const Item = ( {data}) => {
           
                 
         <Card.Description> 
-          <a><span className='titleD'> <Button content='  Ver Producto' icon='right arrow' labelPosition='right' className='butonC'/> </span></a>
+           <a><span className='titleD'> <Button content='  Ver Producto' icon='right arrow' labelPosition='right' className='butonC'/> </span></a>
           
             <Button as='div' className='heartButton' labelPosition='center'>
             <Button color='red' ><Icon name='heart'  />Like</Button>
             <Label as='a'  basic color='red' pointing='left'>2,048</Label>
             </Button> 
-          
         </Card.Description> 
         
         </Card.Content>
