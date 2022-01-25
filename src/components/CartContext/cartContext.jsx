@@ -12,7 +12,7 @@ const CartProvider= ({children})=> {
         console.log ('total compra',totalPrice +product.price) 
     }
 
-    const cleanCart =(product, setProducts) =>{
+    const clearCart =() =>{
         setProducts([])
     }
 
@@ -20,7 +20,7 @@ const CartProvider= ({children})=> {
         products,
         addProducts,
         totalPrice,
-        cleanCart
+        clearCart
     }
 
     return(
