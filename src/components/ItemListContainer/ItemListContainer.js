@@ -47,7 +47,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <div className="category">
-        <h3 className="categories">See All Categories Heare</h3>
+        
 
         {categories.map((category) => {
           return (

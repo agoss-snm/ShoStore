@@ -3,6 +3,7 @@ import { useEffect, useState, useContext } from 'react';
 import './Navbar.css';
 import CartContext from '../CartContext/cartContext';
 import ModalCart from '../ModalCart/ModalCart';
+import DeleteIcon from '@mui/icons-material/Delete';
 //
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -56,22 +57,19 @@ return (
     <div className= 'cart-container'>
     
 
-   <Button variant="outlined" onClick={handleClickOpen}>
-        CART
-      </Button>
+   <Button variant="outlined" onClick={handleClickOpen}><ShoppingCartIcon/>CART </Button>
+   
       <Dialog open={open} onClose={handleClose}>
       
         {products.length ===0? (
             <>
-        <h1>   ---- The Cart Is Empty ----</h1>
+        <h1>   --Opps! The Cart Is Empty ----</h1>
         
         </>
         ):(
         <div>
             <Table sx={{ minWidth: 200 }} aria-label="spanning table" >
-       <TableHead><TableRow> <TableCell align="center" colSpan={3}>
-            Shopping list
-            </TableCell>
+       <TableHead><TableRow> 
             </TableRow>
             </TableHead>
             <TableHead>
@@ -79,6 +77,7 @@ return (
             <TableCell>Product</TableCell>
             <TableCell align="right">Price</TableCell>
             <TableCell align="right">Unit</TableCell>
+            <TableCell align="right">Delete</TableCell>
           </TableRow>
           </TableHead>
           </Table>
@@ -91,15 +90,12 @@ return (
         <TableBody>
             <TableRow>
               <TableCell >{product.name}</TableCell>
-              <TableCell align="center">${product.price}</TableCell>
-              <TableCell align="center">4</TableCell>
+              <TableCell align="left">${product.price}</TableCell>
+              <TableCell align="left">4</TableCell>
+              <TableCell> <DeleteIcon /></TableCell>
             </TableRow>
 
-            <DialogActions>
-          <Button onClick={handleClose}>Home</Button>
-          <Button onClick={() => clearCart()}> Clear Cart </Button>
-          <Link to='/Cart'><Button onClick={handleClose}>Finish</Button></Link>
-        </DialogActions>
+           
 
 
         </TableBody>
@@ -120,7 +116,11 @@ return (
 
           
             <div>
-                
+            <DialogActions>
+          <Button onClick={handleClose}>Close</Button>
+          <Button onClick={() => clearCart()}> Clear Cart </Button>
+          <Link to='/Cart'><Button onClick={handleClose}>Finish</Button></Link>
+        </DialogActions>
             </div>
         </div>
     )}

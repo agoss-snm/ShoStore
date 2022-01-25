@@ -2,16 +2,13 @@ import React from 'react'
 //Style
 import './Footer.css';
 //Semantic UI
-import { Flag, Segment } from 'semantic-ui-react';
 import { Icon, Step } from 'semantic-ui-react'
 
 const Footer=()=>{
     return (
       
     <div className='FooterContainer'>
-    <Segment>
-    <Flag name='ar' />
-  </Segment>
+  
 
   <Step.Group stackable className='tablet'>
     <Step className='footerC'>
