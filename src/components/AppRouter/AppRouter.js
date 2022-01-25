@@ -4,7 +4,7 @@ import {
   Route,
 } from 'react-router-dom';
 //Pages imports
-import CartPage from '../Pages/CartPage';
+import CartPage from '../Pages/CartPage/CartPage';
 import AboutUs from '../Pages/AboutUs/AboutUs';
 import Contact from '../Pages/Contact/Contact';
 //Components imports
