@@ -118,7 +118,7 @@ return (
             <div>
             <DialogActions>
           <Button onClick={handleClose}>Close</Button>
-          <Button onClick={() => clearCart()}> Clear Cart </Button>
+          <Button onClick={clearCart}> Clear Cart </Button>
           <Link to='/Cart'><Button onClick={handleClose}>Finish</Button></Link>
         </DialogActions>
             </div>
