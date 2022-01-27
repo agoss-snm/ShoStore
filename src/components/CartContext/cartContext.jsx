@@ -2,6 +2,7 @@ import {createContext, useState} from 'react';
 
 const CartContext= createContext();
 
+
 const CartProvider= ({children})=> {
     const [products,setProducts]=useState(JSON.parse(localStorage.getItem("productos")) || [])
     const [totalPrice, setTotalPrice] =useState (0)
@@ -14,7 +15,12 @@ const CartProvider= ({children})=> {
 
     const clearCart =() =>{
         setProducts([])
+        setTotalPrice(0)
     }
+
+   
+
+
 
     const data={
         products,
@@ -22,6 +28,9 @@ const CartProvider= ({children})=> {
         totalPrice,
         clearCart
     }
+
+
+
 
     return(
         <CartContext.Provider value={data}>
