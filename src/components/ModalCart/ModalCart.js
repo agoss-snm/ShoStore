@@ -17,70 +17,38 @@ import CartContext from "../CartContext/cartContext";
 import './ModalCart.css'
 
 
+export default function ModalCart({products, totalPrice, clear}) {
 
-
-export default function ModalCart({products, total, ClearCart}) {
-    const {clearCart} = useContext(CartContext)
-
-return (
- 
-
-    <div className={`box-cart active`} id='cartModel'>
-        <Table sx={{ minWidth: 200 }} aria-label="spanning table" >
-       <TableHead><TableRow> <TableCell align="center" colSpan={3}>
-            Shopping list
-            </TableCell>
-            </TableRow>
-            </TableHead>
-            <TableHead>
-          <TableRow>
-            <TableCell>Product</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Unit</TableCell>
-          </TableRow>
-          </TableHead>
-          </Table>
-        {products.length ===0? (
-            <>
-        <h3>Empty cart</h3>
-        <Button>Close</Button>
-        </>
-        ):(
-        <div>
-        {products.map((product)=>{
-            return(
-            <div className= 'item-cart-list'>
-
-                <Table sx={{ minWidth: 200 }} aria-label="spanning table">
-      
-        <TableBody>
-            <TableRow>
-              <TableCell align="right">{product.name}</TableCell>
-              <TableCell align="right">${product.price}</TableCell>
-              <TableCell align="right">4</TableCell>
-            </TableRow>
-
-          
-        </TableBody>
-      </Table>
-
-
-            </div>
-            )
-        })}
-        <TableRow>
-            <TableCell rowSpan={3} />
-            <TableCell colSpan={2}>TOTAL</TableCell>
-            <TableCell align="right">${total}</TableCell>
-          </TableRow>
-            <div>
-            <Button onClick={() => clearCart()}> Clear Cart </Button>
-
-            <Button>Close</Button>
-            <Link to='/Cart'><Button>Finish</Button></Link>
-            </div>
-        </div>
-    )}
-</div>
-)
+  return(
+      <div className={`box-cart active`}>
+              {products.length === 0 ? (
+                  <h2>No hay productos agregados</h2>
+                  ) : (
+                  <>
+                  {products.map((product) => {
+                      return(
+                          <div className='item-cart-list' key={product.id}>
+                              <div className='item-cart-img'>
+                                  <img  src={product.image} />
+                              </div>
+                              <p>{product.name}</p>
+                              <p>{product.price}</p>
+                              <span>Cant: {product.quantity}</span>
+                          </div>
+                      )
+                  })}
+                  <div className='container-finish-buy'>
+                      <p>Total $ {totalPrice}</p>
+                      <Link to='/cart'>
+                          <Button>Buy Now</Button>
+                      </Link>
+                      <Button variant="contained" color="background" onClick={clear}>
+                                  Clean
+                              </Button>
+                  </div>
+                  </>
+              ) }
+             
+          </div>
+  )    
 }

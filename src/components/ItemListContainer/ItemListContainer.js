@@ -60,7 +60,7 @@ const ItemListContainer = () => {
         })}
       </div>
 
-      <ItemList datos={prod} loader={loading} />
+      <ItemList data={prod} loader={loading} />
     </div>
   );
 };

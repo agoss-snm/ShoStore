@@ -5,44 +5,53 @@ import { Button } from 'semantic-ui-react';
 import AppRouter from '../AppRouter/AppRouter';
 import CartContext from "../CartContext/cartContext";
 import {useState, useContext} from 'react';
+import Container from '@mui/material/Container';
+
+export default function ItemDetail({ data }) {
+  const [quantityItem, setQuantityItem] = useState(0)
+  const { addProducts , products} = useContext (CartContext)
+  console.log("data item: ", data)
 
 
-export const ItemDetail =({item})=>{
-  const[show,setShow]=useState(true);
-  const {addProducts}= useContext (CartContext);
-  const {cartList, setCartList, products}=useContext(CartContext)
+  const [itemCart, setItemCart] = useState(
+      {
+          name: data.name,
+          id: data.id,
+          price: data.price,
+          image: data.image,
+          quantity: 0
+      }
+  )
 
-  const onAdd=({contador})=>{
-    console.log( 'items desde OnAdd', item,contador)
-    setShow(false);
+  const onAdd = (value) => {
+      itemCart.quantity = value
   }
 
-  const sendItem= () =>{
-    addProducts (item)
-    console.log ('productos agregados:', products)
+  const sendItem = () => {
+      addProducts (itemCart)
+      console.log("Productos agregados: ", products)
   }
 
-  return <div className='DetailC'>
-  <Grid>
-    <Grid.Column width={4}>
-      <Image src= {item.image} />
-    </Grid.Column>
+  return (
+      <>
+          <Container className="product-item-container">
+                  <div>
+                      <Grid container spacing={2}>
+                          <Grid item xs={8} className="container-img-detalle">
+                              <img src={data.image}/>
+                          </Grid>
+                          <Grid item xs={4} >
+                              <h2>{data.name} </h2>
+                              <p>$ {data.price}</p>
+                              <ItemCount stock={data.stock} onAdd={onAdd}/>
+                              <Button variant="contained" color="background" onClick={sendItem}>
+                                  Comprar
+                              </Button>
+                          </Grid>
+                      </Grid>
+                  </div>
+          </Container>
+      </>
+  )
 
-    <Grid.Column width={9}>
-      <h1> {item.title}</h1>
-      <h2>{item.description}</h2>
-      <div className= 'Precio'>Oferta {item.price}</div>
-    </Grid.Column>
-    </Grid> 
-    
-    {show ? (
-      <div>
-         <ItemCount stock={7} initial={0} onAdd={onAdd}/>
-      </div>
-     ):(
-    <div>
-        <Button onClick={sendItem}>Terminar la compra</Button>
-    </div>
-    )}
-  </div>
-};
+}

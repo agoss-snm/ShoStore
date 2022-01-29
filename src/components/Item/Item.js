@@ -6,6 +6,8 @@ import { Button, Label } from 'semantic-ui-react'
 import './Item.css';
 
 const Item = ( {data}) => {
+
+  
   return(  
     <Card.Group className='cardGroup'>
 
@@ -28,10 +30,6 @@ const Item = ( {data}) => {
         <Card.Description> 
            <a><span className='titleD'> <Button content='  Ver Producto' icon='right arrow' labelPosition='right' className='butonC'/> </span></a>
           
-            <Button as='div' className='heartButton' labelPosition='center'>
-            <Button color='red' ><Icon name='heart'  />Like</Button>
-            <Label as='a'  basic color='red' pointing='left'>2,048</Label>
-            </Button> 
         </Card.Description> 
         
         </Card.Content>
