@@ -5,17 +5,14 @@ import { Button, Label } from 'semantic-ui-react'
 //Styles
 import './Item.css';
 
-const Item = ( {data}) => {
-
-  
+const Item= ({data}) => {
   return(  
     <Card.Group className='cardGroup'>
-
-
       <Link to={`/item/${data.id}`}> <Card className='col-4'>
         <div className='imageS'>
           
           <Image  className='Di' src= {data.image}/> 
+          <span className='titleD'> Stock : {data.stock}</span>
         </div>
 
         <Card.Meta>

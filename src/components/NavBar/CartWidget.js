@@ -20,7 +20,6 @@ const CartWidget = () => {
       <div className="cart-container">
        
           <ShoppingCartIcon  onClick={openCart}/>
-          
           {showCart && <ModalCart products={products} total={totalPrice} clear= {clearCart}/>}
       </div>
   )

@@ -22,29 +22,27 @@ export default function CartPage() {
             <Container className='container-cart-page'>
                 <Grid container xs={8}>
                     <Grid container spacing={2} className="header-cart">
-                        <Grid item xs={8} >
+                        <Grid item xs={4} >
                             <h3>Producto</h3>
                         </Grid>
-                        <Grid item xs={2} >
+                        <Grid item xs={4} >
                             <h3>Cantidad</h3>
                         </Grid>
-                        <Grid item xs={2} >
+                        <Grid item xs={4} >
                             <h3>Precio</h3>
                         </Grid>
                     </Grid>
                     {products.map((product) => {
                         return(
                             <Grid key={product.id} container spacing={2} className="body-cart item-cart-page">
-                                <Grid item xs={2} >
-                                    <img src={product.image} alt="img" />
-                                </Grid>
-                                <Grid item xs={6} >
+                               
+                                <Grid item xs={4} >
                                     <p>{product.name}</p>
                                 </Grid>
-                                <Grid item xs={2} >
+                                <Grid item xs={4} >
                                     <p>{product.quantity}</p>
                                 </Grid>
-                                <Grid item xs={2} >
+                                <Grid item xs={4} >
                                     <p>$ {product.price}</p>
                                 </Grid>
                             </Grid>

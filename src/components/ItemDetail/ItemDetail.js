@@ -7,20 +7,18 @@ import CartContext from "../CartContext/cartContext";
 import {useState, useContext} from 'react';
 import Container from '@mui/material/Container';
 
-export default function ItemDetail({ data }) {
+export default function ItemDetail({data}) {
   const [quantityItem, setQuantityItem] = useState(0)
-  const { addProducts , products} = useContext (CartContext)
+  const { addProducts , products} = useContext(CartContext)
   console.log("data item: ", data)
 
 
   const [itemCart, setItemCart] = useState(
-      {
-          name: data.name,
+      { name: data.name,
           id: data.id,
           price: data.price,
           image: data.image,
-          quantity: 0
-      }
+          quantity: 0}
   )
 
   const onAdd = (value) => {
