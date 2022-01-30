@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import ContactForm from '../../contactForm/contactForm';
 
 export default function CartPage() {
-    const { products, totalPrice } = useContext(CartContext)
+    const {products, totalPrice} = useContext(CartContext)
 
     return (
         <>

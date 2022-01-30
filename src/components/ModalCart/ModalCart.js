@@ -7,15 +7,16 @@ import { Button} from 'semantic-ui-react';
 import './ModalCart.css'
 
 
-export default function ModalCart({products, totalPrice, clear}) {
+export default function ModalCart({productos, totalPrice, clear}) {
 
+    
   return(
       <div className={`box-cart active`}>
-              {products.length === 0 ? (
+              {productos.length === 0 ? (
                   <h2>No hay productos agregados</h2>
                   ) : (
                   <>
-                  {products.map ((product) => {
+                  {productos.map ((product) => {
                       return(
                           <div className='item-cart-list' key={product.id}>
                               <div className='item-cart-img'>
@@ -28,7 +29,6 @@ export default function ModalCart({products, totalPrice, clear}) {
                       )
                   })}
                   <div className='container-finish-buy'>
-                      <p>Total $ {totalPrice}</p>
                       <Link to='/cart'>
                           <Button>Buy Now</Button>
                       </Link>

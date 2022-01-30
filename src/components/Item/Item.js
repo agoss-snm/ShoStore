@@ -1,11 +1,12 @@
 import {Link} from 'react-router-dom';
 // Semantic UI
 import {Card, Icon, Image} from 'semantic-ui-react';
-import { Button, Label } from 'semantic-ui-react'
+import { Button} from 'semantic-ui-react'
 //Styles
 import './Item.css';
 
-const Item= ({data}) => {
+const Item= ( {data} ) => {
+  
   return(  
     <Card.Group className='cardGroup'>
       <Link to={`/item/${data.id}`}> <Card className='col-4'>
