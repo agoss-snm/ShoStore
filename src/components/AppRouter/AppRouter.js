@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 //Pages imports
 import CartPage from '../Pages/CartPage/CartPage';
-import AboutUs from '../Pages/AboutUs/AboutUs';
+import Brands from '../Pages/AboutUs/Brands';
 import Contact from '../Pages/Contact/Contact';
 //Components imports
 import Navbar from '../NavBar/NavBar';
@@ -25,7 +25,7 @@ export default function AppRouter() {
             <Route path='/category/:categoryId' > <ItemListContainer/> </Route>
             <div className= 'appFondo' >  
               <Route path='/item/:id'><ItemDetailContainer/></Route>
-              <Route path='/AboutUs'><AboutUs/></Route>
+              <Route path='/Brands'><Brands/></Route>
               <Route path='/Contact'><Contact/></Route>
               <Route path='/cart' ><CartPage/></Route>
             </div>

@@ -1,89 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Manrope:wght@300;400&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
     
-            .box-cart {
-                position: absolute;
-                z-index: 1;
-                width: 400px;
-                height: auto;
-                background: white;
-                right: 20px;
-                top: 75px;
-                box-sizing: border-box;
-                border-radius: 5px;
-                box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
-            }
+.box-cart {
+    position: absolute !important;
+    z-index: 1;
+    width: 340px;
+    height: auto;
+    background: white;
+    right: 20px;
+    top: 75px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    }
             
-            .box-cart * {
-                color: rgb(172, 38, 38);
-            }
-            
-            .box-cart .item-cart-list {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0px 10px;
-                border-bottom: 1px solid #d6d6d6;
-            }
-            
-            .box-cart .item-cart-list:nth-of-type(1) {
-                border-top: 1px solid #d6d6d6;
-            }
+.box-cart .item-cart-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d6d6d6;
+}       
+
+.box-cart .item-cart-list:nth-of-type(1) {
+    border-top: 1px solid #d6d6d6;
+}
            
-           
-            
-            .box-cart {
-                max-height: 500px;
-                overflow-y: auto;
-            }
+.box-cart {
+    max-height: 500px;
+    overflow-y: auto;
+}
 
-             .headerApp .banner{
-                display: block !important;
-                justify-content: center !important;
-                margin:auto !important;
-                width: 100%;
-                height: 100% !important;
+.headerApp .banner{
+    display: block !important;
+    justify-content: center !important;
+    margin:auto !important;
+    width: 100%;
+    height: 100% !important;
+}
 
-            }
-
-            .headerApp{
-                background-color: rgb(0, 0, 0) !important;
-            }
-            
-    li{
-        list-style-type: none;
-        text-align: right !important;
-        padding-left:100px !important;
-        padding-right:20px;
-        display: inline;
-    }
-
-    ul {
-        margin-top: 0px !important;
-        margin-bottom: 0px!important;
-        background-color: rgb(0, 0, 0) ;
-    }
-    
-    .buttonB{
-        text-decoration: none!important;
-        font-size: 20px;
-        color: rgb(255, 255, 255) !important;
-        font-size: 15px !important;
-        
-    }
+li{
+    list-style-type: none;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    display: inline;
+    font-family: 'Zen Kurenaido', sans-serif !important;
+ }
+  
+.buttonB{
+    text-decoration: none!important;
+    font-size: 20px;
+    color: rgb(0, 0, 0) !important;
+    font-size: 20px !important;
+    font-family: 'Zen Kurenaido', sans-serif !important;
+}
     
  .buttonB:hover{
-    background-color: rgba(241, 245, 6, 0.705)!important;
-    color: rgb(189, 19, 19) !important;
+    background-color: rgba(36, 36, 36, 0.103) !important;
     text-decoration: none!important;
-    border-radius: 10%;
+    border: 0px !important;
     }
-    
-   
-    
-      
-    
-            A:link {text-decoration: none!important };
-            A:visited {color: black;  font-family: arial; text-decoration: none!important };
-            A:hover { color: black; font-family: arial; text-decoration: none !important};
-
-            

@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Manrope:wght@300;400&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
-.buttonE {
-    background-color: rgb(255, 255, 255) !important;
+.buttonCat {
     color: rgb(32, 32, 32) !important;
-    border: 2px solid rgb(14, 14, 14) !important;
     padding: 5px !important;
     margin-left: 10px !important;
-    font-size: 20px !important;
+    font-size: 30px !important;
+    font-family: 'Amatic SC', cursive !important;
+    background-color: rgba(238, 255, 0, 0.712) !important;
+    border-radius: 50px !important;
 }
 
-.buttonE:hover, 
-.buttonE:focus {
+.buttonCat:hover, 
+.buttonCat:focus {
   animation: pulse 1s !important;
-  box-shadow: 1 10 10 2em rgba(rgb(189, 52, 52)) !important;
-  border: 2px solid yellow;
 }
 
 @keyframes pulse {

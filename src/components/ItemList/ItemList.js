@@ -1,11 +1,13 @@
-import { CircularProgress} from "@mui/material"
-import Item from '../Item/Item'
-import './ItemList.css'
 import {Link} from 'react-router-dom'
+// material
+import { CircularProgress} from "@mui/material"
+//components
+import Item from '../Item/Item'
+//style
+import './ItemList.css'
 
 
 const ItemList = ({data, loader}) => {
-
     return(
         <>
         { loader ? <div className='loading'><CircularProgress /></div> : 
@@ -13,10 +15,9 @@ const ItemList = ({data, loader}) => {
          
             {data.map (product => {
                 return (
-                  
-                       <Link className='link' to={`/product/${product.id}`} > 
-                        <Item  data={product} key={product.id} />
-                        </Link>
+                    <Link className='link' to={`/product/${product.id}`} > 
+                    <Item  data={product} key={product.id} />
+                    </Link>
                 )
             })}
         </div>

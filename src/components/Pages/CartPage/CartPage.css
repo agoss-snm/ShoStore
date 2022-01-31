@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Manrope:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Manrope:wght@300;400&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+.TableHead{
+    background-color: rgb(44, 44, 44) !important;
+}
+.subt{
+    color: rgb(194, 238, 0);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.subtdown{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px !important;
+}
+
+.ttpay{
+    padding: 15px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    color: rgb(1, 119, 36);
+}
+.ttMensagge{
+    font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+    color: rgb(44, 44, 44);
+    font-size: 15px !important;
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Manrope:wght@300;400&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+
+#containerlist{
+    align-items: center;
+    margin: 0 auto !important;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+#WWmarks{
+    font-family: 'Zen Kurenaido', sans-serif !important;
+    color: rgb(0, 0, 0) !important;
+    font-size: 20px !important;
+    background-color:rgba(128, 255, 0, 0) ;
+}

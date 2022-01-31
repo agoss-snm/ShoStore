@@ -1,60 +1,58 @@
 import React, {useContext, useState} from 'react'
 //Semantic UI
-import { Button } from 'semantic-ui-react'
 import './CartPage.css'; 
 import Grid from '@mui/material/Grid';
 //Context
 import CartContext from '../../CartContext/cartContext'
 //components
-import Container from '@mui/material/Container';
 import ContactForm from '../../contactForm/contactForm';
+//material
+import Container from '@mui/material/Container';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+
 
 export default function CartPage() {
     const {products, totalPrice} = useContext(CartContext)
 
     return (
-        <>
-
-<h2>Please verify that the data is correct before continuing</h2>
-        <h3>Total Pay: usd$ {totalPrice}</h3>
-
+      <>
+      <p className='ttMensagge'>Please verify that the data is correct before continuing</p>
+      <TableContainer >
+      <Table sx={{ minWidth: 650 }} aria-label="customized table">
+        <TableHead className='TableHead'>
+          <TableRow>
+            <TableCell><h4 className='subt'>Product</h4></TableCell>
+            <TableCell align="right"><h4 className='subt'>Quantity</h4></TableCell>
+            <TableCell align="right"><h4 className='subt'> Price </h4> </TableCell>
+            <TableCell align="right"><h4 className='subt'>Sub- Total</h4></TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {products.map((product) => (
+            <TableRow
+              key={product.id}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row" className='subtdown'> {product.name}</TableCell>
+              <TableCell align="right" className='subtdown'> X {product.quantity}</TableCell>
+              <TableCell align="right" className='subtdown'> ${product.price}</TableCell>
+              <TableCell align="right" className='subtdown'>{product.price * product.quantity}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
 
             <Container className='container-cart-page'>
-                <Grid container xs={8}>
-                    <Grid container spacing={2} className="header-cart">
-                        <Grid item xs={4} >
-                            <h3>Producto</h3>
-                        </Grid>
-                        <Grid item xs={4} >
-                            <h3>Cantidad</h3>
-                        </Grid>
-                        <Grid item xs={4} >
-                            <h3>Precio</h3>
-                        </Grid>
-                    </Grid>
-                    {products.map((product) => {
-                        return(
-                            <Grid key={product.id} container spacing={2} className="body-cart item-cart-page">
-                               
-                                <Grid item xs={4} >
-                                    <p>{product.name}</p>
-                                </Grid>
-                                <Grid item xs={4} >
-                                    <p>{product.quantity}</p>
-                                </Grid>
-                                <Grid item xs={4} >
-                                    <p>$ {product.price}</p>
-                                </Grid>
-                            </Grid>
-                        )
-                    })}
+                <Grid container xs={12}>
                 </Grid>
-                <Grid container xs={4} className='grid-total-price'>
-                    <div>
-                        <p>TOTAL</p>
-                        <span>$ {totalPrice}</span>
-                    </div>
-                    
+                <Grid containerspacing={1}  xs={12} className='grid-total-price'>
+                 <h2 className='ttpay'>Total Pay: usd$ {totalPrice}</h2>
                 </Grid>
             </Container>
             <ContactForm 

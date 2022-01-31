@@ -1,40 +1,17 @@
 import React from 'react'
 //Style
 import './Footer.css';
-//Semantic UI
-import { Icon, Step } from 'semantic-ui-react'
 
 const Footer=()=>{
     return (
       
     <div className='FooterContainer'>
-  
+      <div className='contenido'>
+    <h3 id='textF'>Proyect in React.js   <spam>@ShooStore</spam></h3>
+    <p id='comerce'>e-commerce / CoderHouse *2022</p>
+    <p id='comerce'>https://github.com/agoss-snm</p>
 
-  <Step.Group stackable className='tablet'>
-    <Step className='footerC'>
-      <Icon className='plane' />
-      <Step.Content>
-        <Step.Title>Shipping</Step.Title>
-        <Step.Description>Choose your shipping options</Step.Description>
-      </Step.Content>
-    </Step>
-    <Step active className='footerB'>
-      <Icon className='dollar' />
-      <Step.Content>
-        <Step.Title className='billing' >Billing</Step.Title>
-        <Step.Description>Enter billing information</Step.Description>
-      </Step.Content>
-    </Step>
-    <Step active  className='footerA'>
-      <Icon className='info circle' />
-      <Step.Content>
-        <Step.Title>Confirm Order</Step.Title>
-        <Step.Description>Verify order details</Step.Description>
-      </Step.Content>
-    </Step>
-  </Step.Group>
-
-    <h3>All rights reserved <spam>@ShooStore</spam></h3>
+    </div>
     </div>
     )
   }

@@ -6,19 +6,15 @@ import { Button } from "@mui/material";
 //components
 import "./itemlistcontainer.css";
 import ItemList from "../ItemList/ItemList";
-
 //firebase import
 import db from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const params = useParams();
-  //state of products
   const [prod, setProd] = useState([]);
-  //
   const [loading, setLoading] = useState(false);
   const categories = ["Sports", "Street-Style", "Retro", "Clasics"];
-
 
   useEffect(() => {
     setLoading(true);
@@ -47,13 +43,11 @@ const ItemListContainer = () => {
   return (
     <div>
       <div className="category">
-        
-
         {categories.map((category) => {
           return (
             <>
               <Link to={`/category/${category}`} key={category}>
-                <Button className="buttonE">{category} </Button>
+                <Button className="buttonCat">{category} </Button>
               </Link>
             </>
           );

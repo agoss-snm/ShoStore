@@ -7,7 +7,6 @@ import db from "../../firebase";
 
 export default function ContainerItemDetail() {
   const [product, setProduct] = useState([]);
-  const [loader, setLoader] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,7 +17,6 @@ export default function ContainerItemDetail() {
         let producto = docSnap.data();
         producto.id = docSnap.id;
         setProduct(producto);
-        setLoader(false);
       } else {
         console.log("No such document!");
       }

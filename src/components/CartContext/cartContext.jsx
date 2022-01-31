@@ -12,7 +12,6 @@ const CartProvider = ({ children }) => {
     setProducts([...products, product]);
     addProductStorage(product);
     setTotalPrice(totalPrice + product.price * product.quantity);
-    console.log("total compra", totalPrice + product.price * product.quantity);
   };
 
   // agregar prod al localStorage
@@ -24,7 +23,6 @@ const CartProvider = ({ children }) => {
     setTotalPrice(0);
     localStorage.clear();
   };
-
   const data = {
     products,
     addProducts,

@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Manrope:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Manrope:wght@300;400&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap');
 #cartModel{
     position:fixed !important; 
 }
 
+.oops{
+    color: #000;
+    font-family: 'Zen Kurenaido', sans-serif !important;
+}
