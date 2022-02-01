@@ -22,3 +22,6 @@ I use:
 # App hosted on:
 
 https://shostore.netlify.app/
+
+
+<p> <img align='right' alt='gif'src=https://github.com/agoss-snm/ShoStore/blob/master/gifEcoomerse.gif"" width='800' height='500'/></p>
