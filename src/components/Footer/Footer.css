@@ -28,6 +28,7 @@ h3 spam {
 
 .contenido{
     padding: 100px !important;
+    padding-block-end: 0!important;
    justify-content: space-between;
     font-family: 'Amatic SC', cursive !important;
 }
