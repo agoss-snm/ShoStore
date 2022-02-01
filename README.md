@@ -24,4 +24,4 @@ I use:
 https://shostore.netlify.app/
 
 
-<p> <img align='right' alt='gif'src=https://github.com/agoss-snm/ShoStore/blob/master/gifEcoomerse.gif"" width='800' height='500'/></p>
+<p> <img align='right' alt='gif'src= "https://github.com/agoss-snm/ShoStore/blob/master/gifEcoomerse.gif" width='500' height='350'/></p>
