@@ -1,11 +1,13 @@
 .container{
-    margin-top: 15px !important;
+    margin-top: 15px;
 }
 
-.item{display: flex;
+.item{
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0.8rem;}
+    gap:2em;
+}
 
 .item-container{
     margin: 1.5rem;

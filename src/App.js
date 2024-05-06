@@ -5,6 +5,7 @@ import './App.css';
 import {CartProvider} from './components/CartContext/cartContext';
 import AppRouter from './components/AppRouter/AppRouter';
 import Footer from './components/Footer/Footer';
+import Slogan from './components/slogan/Slogan';
 
 function App() {
   return (

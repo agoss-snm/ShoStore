@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter&family=Manrope:wght@300;400&family=Zen+Kurenaido&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
-.buttonCat {
-    color: rgb(32, 32, 32) !important;
-    padding: 5px !important;
-    margin-left: 10px !important;
-    font-size: 30px !important;
-    font-family: 'Amatic SC', cursive !important;
-    background-color: rgba(238, 255, 0, 0.712) !important;
-    border-radius: 50px !important;
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  justify-content: center; 
+  gap: 8px; 
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.buttonCat:hover, 
-.buttonCat:focus {
-  animation: pulse 1s !important;
-}
 
-@keyframes pulse {
-  5% { box-shadow: 1 0 1 0 var(--hover) !important; }
-}
-
-.categories{
-  color: black;
-  margin-top: 10px !important;
+@media (max-width: 600px) {
+  .category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    justify-content: center;
+    justify-items: center;
+    column-gap: 0px;
+    row-gap: 0px;
+  }
 }

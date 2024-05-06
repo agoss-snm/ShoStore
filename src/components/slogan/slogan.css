@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.pBrand{
+    font-size: 1.5rem;
+    padding: 1.5vh 0;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+.central{
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+}
+.containerSlogan{
+    background-color: rgba(241, 241, 241, 0.425);
+    display: flex;
+    justify-content: center;
+}
+
+.sloganText{
+    font-size: 1.5rem;
+}
+
+.p-3{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: left;
+}
+
+.bold{
+    font-weight: 700;
+    padding: 1.5vh 0;
+    font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+
+.slo{
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem; 
+}
+
+
+.any-container {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem; 
+    line-height: normal;
+}
+
+.any-container .any {
+    margin-right: 0.5rem;
+    flex-shrink: 0; 
+}
+
+.list-span {
+    color: rgb(175, 175, 175);
+    height: 100%; 
+    display: flex;
+    overflow: hidden; 
+    align-items: center; 
+    white-space: nowrap; 
+    margin: 0;
+}
+
+.list-span ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list-span li {
+    display: inline-block; 
+    padding-right: 1rem; 
+    transition: opacity 0.5s ease; 
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+   .p-3{
+    padding: 1.5rem;
+   }
+   .pBrand{
+    font-size: 1.1rem;
+   }
+}
+
+/* Efecto de animación para que la palabra suba desde abajo */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%); /* Empieza desde abajo de la vista */
+        opacity: 0.5; /* Comienza siendo invisible */
+    }
+    to {
+        transform: translateY(0); /* Llega a su posición original */
+        opacity: 1; /* Se vuelve completamente visible */
+    }
+}
+
+/* Aplica la animación de deslizamiento a la palabra */
+.list-span ul li {
+    animation: slideUp 2s ease-in-out forwards;
+}

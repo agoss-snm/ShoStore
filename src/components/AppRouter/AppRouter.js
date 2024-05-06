@@ -17,18 +17,14 @@ import './appRouter.css';
 export default function AppRouter() {
   return (
        <Router>   
-          <header>  
             <Navbar/>
-          </header>   
           <Switch>
             <Route exact path='/'><ItemListContainer/></Route>
             <Route path='/category/:categoryId' > <ItemListContainer/> </Route>
-            <div className= 'appFondo' >  
               <Route path='/item/:id'><ItemDetailContainer/></Route>
               <Route path='/Brands'><Brands/></Route>
               <Route path='/Contact'><Contact/></Route>
               <Route path='/cart' ><CartPage/></Route>
-            </div>
           </Switch>
         </Router>
   );

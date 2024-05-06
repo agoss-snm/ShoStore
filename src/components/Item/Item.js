@@ -1,29 +1,43 @@
-import {Link} from 'react-router-dom';
-// Semantic UI
-import {Card, Icon, Image} from 'semantic-ui-react';
-import { Button} from 'semantic-ui-react'
-//Styles
-import './Item.css';
+import { Link } from "react-router-dom";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActions } from '@mui/material';
+import CardActionArea from '@mui/material/CardActionArea'; 
+import "./Item.css";
 
-const Item= ( {data} ) => {
-  return(  
-    <Card.Group className='cardGroup'>
-      <Link to={`/item/${data.id}`}> <Card className='col-4'>
-        
-        <div className='imageS'>
-          <Image  className='Di' src= {data.image}/> 
-          <span className='titleD'> Stock : {data.stock}</span>
-        </div>
+const Item = ({ data }) => {
+  return (
+    <div className="container">
+          <Link to={`/item/${data.id}`}>
+          <Card sx={{ maxWidth: 245 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="200"
+          image={data.image}
+          alt={data.name}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {data.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          $ {data.price}
+           
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          View
+        </Button>
+      </CardActions>
+    </Card>
+          </Link>
+    </div>
+  );
+};
 
-        <Card.Meta><a><span className='titleD'>{data.name}</span></a></Card.Meta>
-                
-        <Card.Content className='cardContent'>
-          <Card.Header className='price'> ${data.price} <span className='extra'> - <Icon name='percent' /> {data.off} </span> </Card.Header>
-          <Card.Description>  <a><span className='titleD'> <Button content='  Ver Producto' icon='right arrow' labelPosition='right' className='butonC'/> </span></a></Card.Description> 
-        </Card.Content>
-        </Card></Link>
-    </Card.Group>
-        )
-    }
-
-  export default Item;
+export default Item;
