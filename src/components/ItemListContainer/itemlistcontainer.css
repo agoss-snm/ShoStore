@@ -11,15 +11,7 @@
   padding-bottom: 6rem;
 }
 
-.cardCategory img {
-  filter: brightness(0.6); /* Reduce el brillo de la imagen para un efecto más oscuro */
-  transition: filter 0.3s ease-in-out; /* Transición suave para el filtro */
-}
 
-/* Cambia el filtro al pasar el mouse por encima */
-.cardCategory:hover img {
-  filter: brightness(1); /* Restaura el brillo original al pasar el mouse por encima */
-}
 
 @media (max-width: 600px) {
   .category {
