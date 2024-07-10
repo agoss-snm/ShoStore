@@ -6,6 +6,8 @@
     align-items: center;
     margin: 0 auto !important;
     font-family: 'Zen Kurenaido', sans-serif;
+    width: 575px;
+    height: 550px;
 }
 
 #WWmarks{
@@ -14,3 +16,4 @@
     font-size: 20px !important;
     background-color:rgba(128, 255, 0, 0) ;
 }
+

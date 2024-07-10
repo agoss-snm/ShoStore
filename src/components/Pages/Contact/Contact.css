@@ -11,6 +11,11 @@
     justify-content: center !important;
     display: flex;
   }
+  .social{
+    display: grid;
+    grid-column: auto;
+    justify-content: center;
+  }
   #Avatar{
     color: rgb(36, 36, 36);
   }
