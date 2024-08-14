@@ -29,6 +29,7 @@ export default function ItemDetail({ data }) {
   };
 
   return (
+    <div className='container'>
     <Box sx={{ flexGrow: 1, maxWidth: 1000 }} id='boxStyle'>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
@@ -50,7 +51,7 @@ export default function ItemDetail({ data }) {
     <Grid container spacing={2}>
       <Grid item xs={12} md={6}>
         <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
-           <u>Stock avaible:  {data.stock} Units</u>
+           
            <br/>
            Price: ${data.price}
         </Typography>
@@ -58,11 +59,14 @@ export default function ItemDetail({ data }) {
 
       <Grid item xs={12} md={6}>
         <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
-          <ItemCount stock={data.stock} onAdd={onAdd} />
-            <Button onClick={sendItem}> Comprar</Button>
+        <u>Stock avaible:  {data.stock} Units</u>
+         <ItemCount stock={data.stock} onAdd={onAdd} />
+          
+            <Button onClick={sendItem}> Buy</Button>
         </Typography>
       </Grid>
     </Grid>
   </Box>
+  </div>
 );
 }
